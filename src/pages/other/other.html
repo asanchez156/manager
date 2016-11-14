@@ -1,0 +1,26 @@
+<ion-header>
+   <ion-navbar color="dark">
+     <ion-title> 
+        <button ion-button menuToggle>
+          <ion-icon name="menu"> Location</ion-icon>
+        </button>
+      </ion-title>
+   </ion-navbar>
+ </ion-header>
+
+<ion-content padding>
+<div class="other">
+	<div class="otherData">
+	  <div>
+	      <button ion-button color="light" block (click)="getLocation()">Where am I?</button>
+	  </div>
+	  <div padding style="text-align: center;">{{coord}}</div>
+
+	   <div padding>
+	      <button ion-button color="dark" block (click)="sendLocation()">Send</button>
+	  </div>
+
+	</div>
+	
+  </div>
+</ion-content>

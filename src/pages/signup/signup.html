@@ -1,0 +1,42 @@
+<ion-header>
+   <ion-navbar color="dark">
+     <ion-title> 
+        <button ion-button menuToggle>
+          <ion-icon name="menu"> Sing up</ion-icon>
+        </button>
+      </ion-title>
+   </ion-navbar>
+ </ion-header>
+ 
+<ion-content padding>
+  <div class="app-inputs" >
+    <div class="app-input-sub">
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label class="label-mod" color="green" floating>Name</ion-label>
+          <ion-input class="input-mod" color="white" type="text" name="username "[(ngModel)]="data.name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="label-mod" color="green" floating>Username</ion-label>
+          <ion-input class="input-mod" color="white" name="username "[(ngModel)]="data.username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="label-mod" color="green" floating>Password</ion-label>
+          <ion-input class="input-mod" color="white" type="password" name="pass" [(ngModel)]="data.pass"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <div pading style="text-align: center;">
+        <button ion-button color="dark" round (click)="signup()">Sign up</button>
+      </div>
+
+      <ion-list no-lines>
+        <div ion-item style="text-align: center;" (click)="goLogin()" >
+          <strong>Already sing up! Login me.</strong>
+        </div>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
